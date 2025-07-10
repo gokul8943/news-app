@@ -3,7 +3,7 @@ import {FC} from 'react'
 
 const Navbar:FC = () => {
   return (
-    <nav className=''>
+    <nav className='z-50 w-full'>
       <ul className='py-2  px-2'>
         <li className='space-x-6 text-xs text-slate-700'>
           <Link href="/world">World</Link>

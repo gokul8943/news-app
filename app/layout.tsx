@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import NewsCard from "@/components/NewsCard";
 import Navbar from "@/components/Navbar";
+import RandomNews from "@/components/RandomNews";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,12 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main>
+        <main className="px-2 py-2">
           <Header />
           <Navbar />
           <section className="flex justify-between">
-              {children}
-    
+            {children}
+            <RandomNews />
           </section>
         </main>
       </body>

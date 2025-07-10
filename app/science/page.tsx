@@ -4,7 +4,7 @@ import { removeDuplicateData } from '@/utils'
 
 const Science = async () => {
   const newsWorld = await fetchByCategory("science")
-  const filterArticles = removeDuplicateData(newsWorld)
+  const filterArticles = removeDuplicateData(newsWorld.data)
 
   return (
     <div className='w-[700px]'>
