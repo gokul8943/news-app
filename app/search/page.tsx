@@ -41,7 +41,7 @@ const Search = () => {
   },[search])
   
   return (
-    <div className='w-[700px]'>
+    <div className='w-[700px] pt-3'>
       {loading ? (
         <p>loading...</p>
       ) : (
