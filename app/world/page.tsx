@@ -3,7 +3,7 @@ import Article from '@/components/Article'
 import { removeDuplicateData } from '@/utils'
 
 const World = async () => {
-  const newsWorld = await fetchByCategory("sports")
+  const newsWorld = await fetchByCategory("world")
   const filterArticles = removeDuplicateData(newsWorld.data)
 
   return (

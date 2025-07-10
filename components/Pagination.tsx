@@ -11,7 +11,7 @@ type PaginationProps = {
 
 const Pagination = ({ page, onPrev, onNext, hasNextPage }: PaginationProps) => {
   return (
-    <div className="flex justify-center gap-4 mt-6">
+    <div className="flex justify-center gap-4 m-6">
       <button
         onClick={onPrev}
         disabled={page === 1}
