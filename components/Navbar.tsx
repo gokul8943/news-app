@@ -3,10 +3,10 @@ import {FC} from 'react'
 
 const Navbar:FC = () => {
   return (
-    <nav className='z-50 w-full'>
+    <nav className='z-50 fixed w-full bg-white/45'>
       <ul className='py-2  px-2'>
-        <li className='space-x-6 text-xs text-slate-700'>
-          <Link href="/world">Top headlines</Link>
+        <li className='space-x-6 text-xs text-slate-900'>
+          <Link href="/">Top headlines</Link>
           <Link href="/world">World</Link>
           <Link href="/business">Business</Link>
           <Link href="/science">Science</Link>

@@ -34,7 +34,7 @@ export default function RootLayout({
         <main className="">
           <Header />
           <Navbar />
-          <section className="flex justify-between gap-1">
+          <section className="flex justify-between gap-1 pt-4">
             {children}
             <RandomNews />
           </section>
