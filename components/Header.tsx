@@ -1,17 +1,24 @@
 "use client"
-
 import  { useState } from 'react'
 import { Search, Menu, User } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const router = useRouter()
 
   const handleSearch = (e:any) => {
     e.preventDefault()
-    // Handle search functionality here
-    console.log('Searching for:', searchQuery)
+    if(!searchQuery) {
+      router.push('/')
+    }
+    else {
+      router.push(`/search?q=${searchQuery}`)
+    }
   }
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white shadow-sm">
@@ -40,6 +47,7 @@ const Header = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch(e)}
+                onSubmit={handleSearch}
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 hover:bg-white transition-colors"
               />
             </div>
