@@ -5,9 +5,9 @@ import Tag from './Tag'
 
 const Article = ({ data }: { data: news }) => {
   return (
-    <div className='py-2 border-b border-gray-300 mb-4'>
+    <div className='m-2 py-2 border-b border-blue-300 mb-4 shadow-2xl px-2 rounded-xl'>
       <div className='relative w-full h-[300px]'>
-        <Image src={`${data?.urlToImage !== null ? data?.urlToImage : '/img/news-u-logo.webp'}`} alt={data?.title} fill sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 100vw" className='object-cover' />
+        <Image src={`${data?.urlToImage !== null ? data?.urlToImage : '/img/news-u-logo.webp'}`} alt={data?.title} fill sizes="(max-width: 768px) 50vw, (max-width: 1200px) 100vw, 100vw" className='object-cover rounded-2xl' />
       </div>
       <Link
         href={data?.url || "#"}

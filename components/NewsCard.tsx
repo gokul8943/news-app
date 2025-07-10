@@ -10,7 +10,7 @@ const NewsCard = async () => {
     const filterArticles = removeDuplicateData(topNews.data)
 
     return (
-        <div className='w-[700px]'>
+        <div className=''>
             {filterArticles.map((article, idx) => (
                 <div key={`${article?.title}-${idx}`}>
                     <Article data={article} />

@@ -1,7 +1,7 @@
 "use client"
 
 import  { useState } from 'react'
-import { Search, Menu, Bell, User } from 'lucide-react'
+import { Search, Menu, User } from 'lucide-react'
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState('')

@@ -3,13 +3,15 @@ import RandomArticle from '../components/RandomArticle'
 import { removeDuplicateData } from '@/utils'
 
 const RandomNews = async () => {
-  const randomNews = await fetchByCategory("random news")
+  const randomNews = await fetchByCategory("business")
+  console.log(randomNews.data);
+  
   const filterArticles = removeDuplicateData(randomNews.data)
 
 
   return (
-    <div className='mt-4 w-[450px] border-l border-gray-300'>
-      <h1 className="pl-2 text-2xl font-fold underline">Random News</h1>
+    <div className='mt-4 w-[500px] border-l p-1 border-gray-300'>
+      <h1 className="pl-2 text-2xl  font-bold text-blue-500">Random News</h1>
       {filterArticles.map((article, idx) => (
         <div key={`${article?.title}-${idx}`}>
           <RandomArticle data={article} />

@@ -31,10 +31,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="px-2 py-2">
+        <main className="">
           <Header />
           <Navbar />
-          <section className="flex justify-between">
+          <section className="flex justify-between gap-1">
             {children}
             <RandomNews />
           </section>
