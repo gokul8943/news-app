@@ -1,8 +1,9 @@
 import React from 'react'
 
 const NewsCard = () => {
+    
   return (
-    <div>
+    <div className='w-[700px]'>
       
     </div>
   )
