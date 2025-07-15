@@ -6,7 +6,6 @@ const slugs = [
     "food",
     "health",
     "lifestyle",
-    "search",
     "sports",
     "science",
     "travel",
@@ -17,7 +16,7 @@ const slugs = [
 export default function NewsIndexPage() {
     return (
         <div>
-            <h1>All News Categories</h1>
+            {/* <h1>All News Categories</h1> */}
             <ul>
                 {slugs.map((slug) => (
                     <li key={slug}>

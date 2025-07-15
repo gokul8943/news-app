@@ -4,7 +4,7 @@ import { removeDuplicateData } from '@/utils'
 
 const RandomNews = async () => {
   const randomNews = await fetchByCategory("business")
-  console.log(randomNews.data);
+  
   
   const filterArticles = removeDuplicateData(randomNews.data)
 
